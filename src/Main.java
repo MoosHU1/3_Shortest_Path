@@ -53,7 +53,7 @@ public class Main {
         stappen1.add(stap3Auto);
 
 
-        Rit r1 = new Rit(bestemming.getDistance(), beginpunt, bestemming, stappen1, "Auto");
+        Rit r1 = new Rit(bestemming.getWeight(), beginpunt, bestemming, stappen1, "Auto");
         System.out.println(r1.toString());
 
         //Vliegtuig
@@ -105,12 +105,18 @@ public class Main {
         stappenVliegtuig.add(stap2Vliegtuig);
         stappenVliegtuig.add(stap3Vliegtuig);
 
-
-        Vlucht r2 = new Vlucht(bestemmingVliegtuig.getDistance(), beginpuntVliegtuig, bestemmingVliegtuig, stappenVliegtuig, "Vliegtuig");
+        Vlucht r2 = new Vlucht(bestemmingVliegtuig.getWeight(), beginpuntVliegtuig, bestemmingVliegtuig, stappenVliegtuig, "Vliegtuig");
         System.out.println(r2 .toString());
 
+        //Compare
+        Vlucht compareVoorbeeld = new Vlucht(5, beginpuntVliegtuig, bestemmingVliegtuig, stappenVliegtuig, "Vliegtuig");
+        if (r2.compareTo(compareVoorbeeld) == 1){
+            System.out.println("Rijs 2 is duurder dan rijs voorbeeld ");
 
-
+        }
+        else{
+            System.out.println("Rijs 2 is goedkoper dan rijs voorbeeld ");
+        }
 
         
 

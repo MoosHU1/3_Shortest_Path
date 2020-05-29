@@ -6,7 +6,7 @@ public class Reis {
     private Node bestemming;
     private List<Stap> stappen;
     private String type;
-    private float weight;
+
 
 
     public Reis(Node bgn, Node best,List<Stap> stpn, String typ){
@@ -14,7 +14,7 @@ public class Reis {
         bestemming = best;
         stappen = stpn;
         type = typ;
-        weight = bestemming.getDistance();
+
 
     }
 

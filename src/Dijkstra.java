@@ -31,8 +31,8 @@ public class Dijkstra {
     }
 
     private static void CalculateMinimumDistance(Node evaluationNode, Integer edgeWeigh, Node sourceNode) {
-        Integer sourceDistance = sourceNode.getDistance();
-        if (sourceDistance + edgeWeigh < evaluationNode.getDistance()) {
+        Integer sourceDistance = sourceNode.getWeight();
+        if (sourceDistance + edgeWeigh < evaluationNode.getWeight()) {
             evaluationNode.setDistance(sourceDistance + edgeWeigh);
             LinkedList<Node> shortestPath = new LinkedList<>(sourceNode.getShortestPath());
             shortestPath.add(sourceNode);
@@ -45,7 +45,7 @@ public class Dijkstra {
         Node lowestDistanceNode = null;
         int lowestDistance = Integer.MAX_VALUE;
         for (Node node : unsettledNodes) {
-            int nodeDistance = node.getDistance();
+            int nodeDistance = node.getWeight();
             if (nodeDistance < lowestDistance) {
                 lowestDistance = nodeDistance;
                 lowestDistanceNode = node;

@@ -39,7 +39,7 @@ class DijkstraTest {
         //Geef hier het beginpunt aan
         Node beginpuntVliegtuig = NewYork;
         graphVliegtuig = Dijkstra.calculateShortestPathFromSource(graphVliegtuig, beginpuntVliegtuig);
-        assertEquals(5, LosAngeles.getDistance());
+        assertEquals(5, LosAngeles.getWeight());
 
 
     }

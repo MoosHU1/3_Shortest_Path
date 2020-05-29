@@ -26,7 +26,7 @@ class NodeTest {
         //Geef hier het beginpunt aan
         Node beginpunt = Amsterdam;
         graphAuto = Dijkstra.calculateShortestPathFromSource(graphAuto, beginpunt);
-        assertEquals(10, DenHaag.getDistance());
+        assertEquals(10, DenHaag.getWeight());
 
 
     }

@@ -38,7 +38,7 @@ public class Node {
         this.shortestPath = shortestPath;
     }
 
-    public Integer getDistance() {
+    public Integer getWeight() {
         return distance;
     }
 

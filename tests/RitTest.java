@@ -58,7 +58,7 @@ class RitTest {
         stappen1.add(stap3Auto);
 
 
-        Rit r1 = new Rit(bestemming.getDistance(), beginpunt, bestemming, stappen1, "Auto");
+        Rit r1 = new Rit(bestemming.getWeight(), beginpunt, bestemming, stappen1, "Auto");
         Rit r2 = new Rit(5, beginpunt, bestemming, stappen1, "Auto");
 
 
