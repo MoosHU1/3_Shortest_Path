@@ -6,18 +6,11 @@ public class Main {
         //Auto
         List<Node> NodesAuto= new ArrayList<Node>();
         Node Amsterdam = new Node("Amsterdam");
-        NodesAuto.add(Amsterdam);
         Node DenHaag = new Node("Den Haag");
-        NodesAuto.add(DenHaag);
         Node Utrecht = new Node("Utrecht");
-        NodesAuto.add(Utrecht);
         Node Enschede = new Node("Enschede");
-        NodesAuto.add(Enschede);
         Node Schagen = new Node("Schagen");
-        NodesAuto.add(Schagen);
         Node Rotterdam = new Node("Rotterdam");
-        NodesAuto.add(Rotterdam);
-
 
         Amsterdam.addDestination(DenHaag, 10);
         Amsterdam.addDestination(Utrecht, 15);
@@ -49,9 +42,6 @@ public class Main {
         //Geef hier de bestemming aan
         Node bestemming = Rotterdam;
 
-
-
-
         List<Node> route = bestemming.getShortestPath();
         Stap stap1Auto = new Stap(route.get(0), route.get(1));
         Stap stap2Auto = new Stap(route.get(1), route.get(2));
@@ -69,16 +59,10 @@ public class Main {
         //Vliegtuig
         List<Node> NodesVliegtuig= new ArrayList<Node>();
         Node NewYork = new Node("New York");
-        NodesAuto.add(NewYork);
         Node Tokio = new Node("Tokio");
-        NodesAuto.add(Tokio);
         Node LosAngeles = new Node("Los Angeles");
-        NodesAuto.add(LosAngeles);
         Node Istanbul = new Node("Istanbul");
-        NodesAuto.add(Istanbul);
         Node Parijs = new Node("Parijs");
-        NodesAuto.add(Parijs);
-
 
         NewYork.addDestination(Tokio, 5);
         NewYork.addDestination(Istanbul, 3);
@@ -102,7 +86,7 @@ public class Main {
 
         //Geef hier het beginpunt aan
         Node beginpuntVliegtuig = NewYork;
-        graphAuto = Dijkstra.calculateShortestPathFromSource(graphAuto, beginpuntVliegtuig);
+        graphVliegtuig = Dijkstra.calculateShortestPathFromSource(graphVliegtuig, beginpuntVliegtuig);
 
 
         //Geef hier de bestemming aan
@@ -122,7 +106,7 @@ public class Main {
         stappenVliegtuig.add(stap3Vliegtuig);
 
 
-        Vlucht r2 = new Vlucht(bestemming.getDistance(), beginpuntVliegtuig, bestemmingVliegtuig, stappenVliegtuig, "Vliegtuig");
+        Vlucht r2 = new Vlucht(bestemmingVliegtuig.getDistance(), beginpuntVliegtuig, bestemmingVliegtuig, stappenVliegtuig, "Vliegtuig");
         System.out.println(r2 .toString());
 
 

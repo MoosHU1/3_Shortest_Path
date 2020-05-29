@@ -10,6 +10,7 @@ public class Vlucht extends Reis {
     }
 
 
+
     public int compareTo(Vlucht other){
         return Float.compare(this.cost, other.cost);
 

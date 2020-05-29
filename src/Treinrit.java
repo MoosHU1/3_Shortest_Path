@@ -14,7 +14,16 @@ public class Treinrit extends Reis {
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Reis{" +
+                "begin=" + getBegin().getName() +
+                ", bestemming=" + getBestemming().getName() +
+                ", stappen=" + getStappenString() +
+                ", Vervoer='" + getType() + '\'' +
+                ", Tijd='" + time + '\'' +
+                '}';
+    }
 
 
 }

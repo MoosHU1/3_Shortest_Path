@@ -9,7 +9,7 @@ public class Rit extends Reis{
 
     }
 
-    public int compareTo(Rit other){
+    public int compareTo(Rit other) {
         return Float.compare(this.kilometer, other.kilometer);
 
 
