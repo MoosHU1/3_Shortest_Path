@@ -34,6 +34,7 @@ public class Node {
     }
 
     public void setShortestPath(List<Node> shortestPath) {
+
         this.shortestPath = shortestPath;
     }
 
@@ -42,7 +43,7 @@ public class Node {
     }
 
     public List<Node> getShortestPath() {
-        System.out.println(shortestPath);
+
         return shortestPath;
     }
 
@@ -53,4 +54,7 @@ public class Node {
     public String getName() {
         return name;
     }
+
+
+
 }
